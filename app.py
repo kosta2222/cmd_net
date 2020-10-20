@@ -1,22 +1,17 @@
 
-from Brainy import *
-import clr
-import math
-import numpy as np
-import matplotlib.pyplot as plt
-import math
-import random
-from serial_deserial import to_file, deserialization
-from work_with_arr import add_2_vecs_comps
-from datetime import datetime
 import sys
+from datetime import datetime
+from work_with_arr import add_2_vecs_comps
+from serial_deserial import to_file, deserialization
+import random
+import matplotlib.pyplot as plt
+import numpy as np
+import math
 
-import clr # Специальная библиотека С# + Python
-clr.AddReference("Program")  # ссылка на dll
+import clr  # Специальная библиотека С# + Python
 
-
-"""
-# Переведено в код С#
+if clr.AddReference("Program"):  # ссылка на dll
+    from Brainy import *  # код из С#
 
 TRESHOLD_FUNC = 0
 TRESHOLD_FUNC_DERIV = 1
@@ -37,6 +32,9 @@ SOFTMAX_DERIV = 15
 PIECE_WISE_LINEAR = 16
 PIECE_WISE_LINEAR_DERIV = 17
 MODIF_MSE = 18
+
+"""
+# Переведено в код С#
 
 ready = False
 
